@@ -5,6 +5,7 @@ FROM maven:3.6.0-jdk-8 as build
 # https://issues.apache.org/jira/browse/SUREFIRE-1588.
 ENV JAVA_TOOL_OPTIONS "-Djdk.net.URLClassPath.disableClassPathURLCheck=true"
 
+RUN git submodule update --remote --merge
 # Build Sakai.
 COPY sakai sakai
 WORKDIR sakai
