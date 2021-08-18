@@ -9,7 +9,6 @@ ENV JAVA_TOOL_OPTIONS "-Djdk.net.URLClassPath.disableClassPathURLCheck=true"
 COPY sakai sakai
 WORKDIR sakai
 
-RUN git submodule update --remote --merge
 # nb. Skip tests to speed up the container build.
 RUN mvn install -Dmaven.test.skip=true -DskipTests
 
