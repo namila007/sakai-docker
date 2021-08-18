@@ -19,6 +19,6 @@ services:
       DATABASE_NAME: sakai
       DATABASE_USER: sakai
       DATABASE_PASSWORD: sakaipass
-    image: hypothesis/sakai:latest
+    image: namila007/sakai-docker:latest
     ports:
       - "8080:8080"
